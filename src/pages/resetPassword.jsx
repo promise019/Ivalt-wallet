@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Lock } from "lucide-react";
-import logo from "../assets/icon/i-vault-logo.svg";
+import Logo from "../components/ui/logo";
+import Input from "../components/ui/Input";
+import Button from "../components/ui/Button";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
@@ -13,7 +15,7 @@ export default function ResetPasswordPage() {
         <div className="flex items-center justify-center py-6 border-b border-gray-800">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-green-400 to-emerald-600 shadow-lg">
-              <img src={logo} alt="" />
+              <Logo />
             </div>
             <span className="text-white text-2xl font-semibold">I-Vault</span>
           </div>
@@ -27,7 +29,7 @@ export default function ResetPasswordPage() {
           <form className="space-y-5">
             <div className="relative">
               <Lock className="absolute left-3 top-3 text-gray-400" size={20} />
-              <input
+              <Input
                 type="password"
                 placeholder="New Password"
                 value={password}
@@ -37,7 +39,7 @@ export default function ResetPasswordPage() {
             </div>
             <div className="relative">
               <Lock className="absolute left-3 top-3 text-gray-400" size={20} />
-              <input
+              <Input
                 type="password"
                 placeholder="Confirm New Password"
                 value={confirmPassword}
@@ -45,12 +47,12 @@ export default function ResetPasswordPage() {
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:ring-2 focus:ring-green-400 focus:outline-none"
               />
             </div>
-            <button
+            <Button
               type="button"
               className="w-full py-3 rounded-lg bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold hover:opacity-95 transition"
             >
               Reset Password
-            </button>
+            </Button>
           </form>
         </div>
 

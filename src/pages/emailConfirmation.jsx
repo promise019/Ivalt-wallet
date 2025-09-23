@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
-import logo from "../assets/icon/i-vault-logo.svg";
+import Logo from "../components/ui/logo";
+import Button from "../components/ui/Button";
 
 export default function EmailConfirmationPage() {
   // use toast or custom notification to notfy success or error
@@ -10,7 +11,7 @@ export default function EmailConfirmationPage() {
         <div className="flex items-center justify-center py-6 border-b border-gray-800">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-green-400 to-emerald-600 shadow-lg">
-              <img src={logo} alt="" />
+              <Logo />
             </div>
             <span className="text-white text-2xl font-semibold">I-Vault</span>
           </div>
@@ -28,12 +29,12 @@ export default function EmailConfirmationPage() {
             We’ve sent a confirmation link to your email. Please click the link
             to verify your account.
           </p>
-          <button
+          <Button
             type="button"
             className="w-full py-3 rounded-lg bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold hover:opacity-95 transition"
           >
             Resend Email
-          </button>
+          </Button>
         </div>
 
         {/* Footer */}
