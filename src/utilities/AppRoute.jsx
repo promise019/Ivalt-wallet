@@ -3,6 +3,10 @@ import AuthPage from "../pages/Registration";
 import ResetPasswordPage from "../pages/resetPassword";
 import EmailConfirmationPage from "../pages/emailConfirmation";
 import MainApplication from "../components/layout/MainApplication";
+import Home from "../pages/Home";
+import Earn from "../pages/Earn";
+import History from "../pages/History";
+import Settings from "../pages/settings";
 
 export default function ApplicationRoutes() {
   return (
@@ -12,7 +16,10 @@ export default function ApplicationRoutes() {
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/confirm-email" element={<EmailConfirmationPage />} />
         <Route path="/ivault" element={<MainApplication />}>
-          <Route />
+          <Route path="home" element={<Home />} />
+          <Route path="earn" element={<Earn />} />
+          <Route path="history" element={<History />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
