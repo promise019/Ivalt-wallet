@@ -3,9 +3,19 @@ import { User, Lock, Mail } from "lucide-react";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 import Logo from "../components/ui/logo";
+import { useNavigate } from "react-router";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
+
+  const navigate = useNavigate();
+
+  const authSubmit = (e) => {
+    e.preventDefault();
+    // if (isLogin) {
+    navigate("/ivault/home");
+    // }
+  };
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">
@@ -65,6 +75,7 @@ export default function AuthPage() {
             </div>
 
             <Button
+              onClick={(e) => authSubmit(e)}
               type="button"
               className="w-full py-3 rounded-lg bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold hover:opacity-95 transition"
             >
