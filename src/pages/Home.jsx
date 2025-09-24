@@ -59,11 +59,31 @@ export default function Home() {
           </div>
         </div>{" "}
         {/*user info and actions field ends*/}
-        
         {/* Tokens List */}
         <div className="">
           <h2 className="text-lg font-semibold mt-4 mb-3">Your Tokens</h2>
-          <div className="space-y-3 overflow-y-auto">
+          <div className="space-y-3 max-h-[70%] overflow-y-auto">
+            <div className="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <CreditCard className="w-6 h-6 text-green-400" />
+                <span className="text-gray-300">Bitcoin (BTC)</span>
+              </div>
+              <span className="text-white font-semibold">1.245 BTC</span>
+            </div>
+            <div className="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <CreditCard className="w-6 h-6 text-green-400" />
+                <span className="text-gray-300">Ethereum (ETH)</span>
+              </div>
+              <span className="text-white font-semibold">10.50 ETH</span>
+            </div>
+            <div className="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <CreditCard className="w-6 h-6 text-green-400" />
+                <span className="text-gray-300">iCoin (ICN)</span>
+              </div>
+              <span className="text-white font-semibold">500 ICN</span>
+            </div>
             <div className="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <CreditCard className="w-6 h-6 text-green-400" />
