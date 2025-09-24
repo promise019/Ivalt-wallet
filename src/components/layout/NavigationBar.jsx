@@ -92,7 +92,7 @@ export default function NavigationBar() {
          md:static md:rounded-lg md:flex md:h-fit md:space-x-3`
         }
       >
-        <LogOut className="text-white" size={35} />
+        <LogOut className="text-red-700" size={35} />
         <h1 className="font-medium -ml-2 absolute md:static md:text-white md:mt-1">
           Logout
         </h1>
