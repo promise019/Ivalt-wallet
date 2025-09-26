@@ -1,10 +1,13 @@
 import { Coins, Link, Gift } from "lucide-react";
+import Header from "../components/layout/Header";
 
 export default function Earn() {
   return (
     <main className="text-white max-w-full md:ml-[17%] lg:ml-[14%] xl:ml-[12%] bg-black px-4 pt-4 pb-22">
-      <h1 className="text-2xl font-bold mb-6 sticky top-4">Earn</h1>
-      <section className="overflow-y-auto">
+      <Header className={"fixed w-screen h-fit top-0 py-5 mb-6 z-3 bg-black"}>
+        <h1 className="text-2xl font-bold">Earn</h1>
+      </Header>
+      <section className="h-fit pb-4 mt-15">
         {/* Google Ads Section */}
         <div className="bg-gray-800 rounded-2xl mb-6 p-4 flex items-center justify-center h-24 md:h-32 lg:h-40 w-full">
           <span className="text-gray-400 text-sm">Google Ads Placeholder</span>

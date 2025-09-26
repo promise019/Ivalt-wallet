@@ -10,6 +10,7 @@ import {
   LogOut,
   Coins,
 } from "lucide-react";
+import Header from "../components/layout/Header";
 
 export default function Settings() {
   const settingsOptions = [
@@ -35,9 +36,10 @@ export default function Settings() {
   ];
   return (
     <main className="text-white max-w-full md:ml-[17%] lg:ml-[14%] xl:ml-[12%] bg-black px-4 pt-4 pb-23 lg:px-20">
-      <h1 className="text-2xl font-bold mb-6">Settings</h1>
-
-      <div className="space-y-3 md:grid grid-cols-3 gap-3">
+      <Header className="fixed w-screen h-fit top-0 py-4 z-3 bg-black">
+        <h1 className="text-2xl font-bold ">Settings</h1>
+      </Header>
+      <div className="space-y-3 md:grid grid-cols-3 gap-3 mt-15">
         {settingsOptions.map((item, index) => (
           <div
             key={index}
