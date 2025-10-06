@@ -14,9 +14,9 @@ import Header from "../components/layout/Header";
 export default function Home() {
   const [showAmount, setShowAmount] = useState(true);
   return (
-    <main className="text-white min-h-screen bg-black px-4 pt-4 overflow-y-hidden max-w-full md:px-15 md:ml-[17%] lg:ml-[14%] xl:ml-[12%] md:max-w-[83%] lg:max-w-[86%] xl:max-w-[88%] overflow-x-hidden">
+    <main className="relative text-white h-screen bg-black px-2 pt-1 overflow-y-auto max-w-full md:px-15 md:ml-[17%] lg:ml-[14%] xl:ml-[12%] md:max-w-[83%] lg:max-w-[86%] xl:max-w-[88%] overflow-x-hidden">
       {/* Header */}
-      <Header className="fixed w-screen left-0 px-4 h-fit top-0 py-5 mb-6 z-3 bg-black md:px-15 md:ml-[17%] lg:ml-[14%] xl:ml-[12%] md:max-w-[83%] lg:max-w-[86%] xl:max-w-[88%]">
+      <Header className="sticky w-full px-1 left-0 h-fit top-0 py-5 mb-1 z-3 bg-black">
         <User className="w-6 h-6 text-green-400 inline-block" />
         <h1 className="text-lg font-bold mb-6 inline">Hi, Daniel</h1>
         {/*user info and actions field start*/}
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Actions */}
-        <div className="grid p-1 grid-cols-4 gap-2 mt-4 md:gap-6 xl:absolute xl:right-17 top-15">
+        <div className="grid p-1 grid-cols-4 gap-2 mt-4 md:gap-6 xl:absolute xl:right-7 top-15">
           <button className="bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold p-2 rounded-xl flex flex-col items-center">
             <Send className="w-6 h-6 mb-2" /> Send
           </button>
@@ -60,8 +60,8 @@ export default function Home() {
       </Header>
       {/*user info and actions field ends*/}
       {/* Tokens List */}
-      <div className="mt-68 relative pb-23 xl:mt-40">
-        <h2 className="text-lg font-semibold mt-4 mb-3">Your Tokens</h2>
+      <div className="px-2 pb-23">
+        <h2 className="text-lg font-semibold mb-3">Your Tokens</h2>
         <div className="space-y-3 lg:grid lg:grid-cols-2 gap-4">
           <div className="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
             <div className="flex items-center gap-3">

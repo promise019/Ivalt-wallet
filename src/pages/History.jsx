@@ -147,12 +147,12 @@ export default function History() {
     },
   ];
   return (
-    <main className="text-white max-w-full md:ml-[17%] lg:ml-[14%] xl:ml-[12%] overflow-y-hidden p-4 h-fit">
-      <Header className="fixed w-screen h-fit top-0 py-5 mb-6 z-3 bg-black">
+    <main className="text-white max-w-full md:ml-[17%] lg:ml-[14%] xl:ml-[12%] overflow-y-auto px-4 pb-2 h-screen">
+      <Header className="sticky w-full h-fit top-0 py-5 z-3 bg-black">
         <h1 className="text-2xl font-bold">Notifications</h1>
       </Header>
 
-      <div className="space-y-3 h-fit mt-15 pb-18">
+      <div className="space-y-3 h-fit pb-18">
         {notifications.map((note, index) => (
           <div
             key={index}
