@@ -6,15 +6,18 @@ import {
   ShoppingCart,
   TrendingUp,
   Eye,
+  History,
   EyeClosed,
+  ArrowRight,
 } from "lucide-react";
 import { useState } from "react";
 import Header from "../components/layout/Header";
+import { Link } from "react-router";
 
 export default function Home() {
   const [showAmount, setShowAmount] = useState(true);
   return (
-    <main className="relative text-white h-screen bg-black px-2 pt-1 overflow-y-auto max-w-full md:px-15 md:ml-[17%] lg:ml-[14%] xl:ml-[12%] md:max-w-[83%] lg:max-w-[86%] xl:max-w-[88%] overflow-x-hidden">
+    <main className="relative text-white h-screen bg-black px-2 pt-1 overflow-y-auto max-w-full md:px-15 md:ml-[17%] lg:px-9 lg:ml-[14%] xl:ml-[12%] md:max-w-[83%] lg:max-w-[86%] xl:max-w-[88%] overflow-x-hidden">
       {/* Header */}
       <Header className="sticky w-full px-1 left-0 h-fit top-0 py-5 mb-1 z-3 bg-black">
         <User className="w-6 h-6 text-green-400 inline-block" />
@@ -24,18 +27,25 @@ export default function Home() {
         {/* User Info and Balance */}
         <div className="bg-gray-900 rounded-2xl p-5 mt-4 flex items-center justify-between lg:h-fit">
           <div className="space-x-3">
-            <p className="text-gray-400 inline">Balance</p>
+            <p className="text-gray-400 inline">Total Balance</p>
             {showAmount ? (
               <Eye
-                className="inline-block w-5 h-4"
+                className="inline-block w-5 h-4 -mt-1"
                 onClick={() => setShowAmount(false)}
               />
             ) : (
               <EyeClosed
-                className="inline-block w-5 h-4"
+                className="inline-block w-5 h-4 -mt-1"
                 onClick={() => setShowAmount(true)}
               />
             )}
+            <Link
+              className="text-gray-400 absolute right-2 text-sm lg:right-[50%]"
+              to="/ivault/history"
+            >
+              Transaction History{" "}
+              <ArrowRight className="inline-block w-5 h-4 mt-0.5" />
+            </Link>
             <p className="text-2xl font-semibold text-green-400 mt-1">
               {showAmount ? "$24,580.32" : "****"}
             </p>
@@ -43,7 +53,7 @@ export default function Home() {
         </div>
 
         {/* Actions */}
-        <div className="grid p-1 grid-cols-4 gap-2 mt-4 md:gap-6 xl:absolute xl:right-7 top-15">
+        <div className="grid p-1 grid-cols-4 gap-2 mt-4 md:gap-6 lg:absolute right-5 top-15">
           <button className="bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold p-2 rounded-xl flex flex-col items-center">
             <Send className="w-6 h-6 mb-2" /> Send
           </button>

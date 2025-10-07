@@ -1,10 +1,10 @@
 import {
-  History,
   LogOut,
   Settings,
   ActivitySquare,
   Wallet,
   Headset,
+  Bell,
 } from "lucide-react";
 import { NavLink } from "react-router";
 import Logo from "../ui/logo";
@@ -13,7 +13,7 @@ export default function NavigationBar() {
   return (
     <nav
       className="fixed bottom-0 w-screen h-fit bg-black flex justify-between pb-6 z-7 pt-2 px-6 border-t border-gray-900
-     md:block md:h-screen md:top-0 md:left-0 md:space-y-4 md:bg-black md:w-[17%] md:p-2 md:border-r lg:w-[14%] xl:w-[12%]"
+     md:block md:h-screen md:top-0 md:left-0 md:space-y-4 md:bg-black md:w-[20%] md:p-2 md:border-r lg:w-[14%] xl:w-[12%]"
     >
       <Logo className={"hidden md:inline-block w-11"} />{" "}
       <span className="hidden text-white md:inline-block font-bold text-lg">
@@ -46,16 +46,16 @@ export default function NavigationBar() {
         </h1>
       </NavLink>
       <NavLink
-        to="history"
+        to="notification"
         className={({ isActive }) =>
           `${
             isActive ? "bg-gradient-to-r from-green-400 to-emerald-600" : ""
-          } relative  text-green-400 rounded-full p-1.5 md:static md:rounded-lg md:flex md:h-fit md:space-x-5`
+          } relative  text-green-400 rounded-full p-1.5 md:static md:rounded-lg md:flex md:h-fit md:space-x-10`
         }
       >
-        <History className="text-white" size={30} />
-        <h1 className="font-medium -ml-3 -bottom-6 absolute md:static md:text-white md:mt-1">
-          History
+        <Bell className="text-white" size={30} />
+        <h1 className="font-medium -ml-8 -bottom-6 absolute md:static md:text-white md:mt-1 md:text-sm">
+          Notification
         </h1>
       </NavLink>
       <NavLink

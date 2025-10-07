@@ -5,8 +5,9 @@ import EmailConfirmationPage from "../pages/emailConfirmation";
 import MainApplication from "../components/layout/MainApplication";
 import Home from "../pages/Home";
 import Earn from "../pages/Earn";
-import History from "../pages/History";
+import Notification from "../pages/Notification";
 import Settings from "../pages/settings";
+import History from "../pages/TransactionHistory";
 
 export default function ApplicationRoutes() {
   return (
@@ -18,8 +19,9 @@ export default function ApplicationRoutes() {
         <Route path="/ivault" element={<MainApplication />}>
           <Route path="home" element={<Home />} />
           <Route path="earn" element={<Earn />} />
-          <Route path="history" element={<History />} />
+          <Route path="notification" element={<Notification />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="history" element={<History />} />
         </Route>
       </Routes>
     </BrowserRouter>
