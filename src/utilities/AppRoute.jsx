@@ -8,6 +8,8 @@ import Earn from "../pages/Earn";
 import Notification from "../pages/Notification";
 import Settings from "../pages/settings";
 import History from "../pages/TransactionHistory";
+import SendCrypto from "../pages/SendToken";
+import ReceiveToken from "../pages/ReceiveToken";
 
 export default function ApplicationRoutes() {
   return (
@@ -22,6 +24,8 @@ export default function ApplicationRoutes() {
           <Route path="notification" element={<Notification />} />
           <Route path="settings" element={<Settings />} />
           <Route path="history" element={<History />} />
+          <Route path="send" element={<SendCrypto />} />
+          <Route path="receive" element={<ReceiveToken/>} />
         </Route>
       </Routes>
     </BrowserRouter>

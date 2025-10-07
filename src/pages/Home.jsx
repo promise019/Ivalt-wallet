@@ -12,10 +12,12 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Header from "../components/layout/Header";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import Button from "../components/ui/Button";
 
 export default function Home() {
   const [showAmount, setShowAmount] = useState(true);
+  const navigate = useNavigate();
   return (
     <main className="relative text-white h-screen bg-black px-2 pt-1 overflow-y-auto max-w-full md:px-15 md:ml-[17%] lg:px-9 lg:ml-[14%] xl:ml-[12%] md:max-w-[83%] lg:max-w-[86%] xl:max-w-[88%] overflow-x-hidden">
       {/* Header */}
@@ -54,18 +56,24 @@ export default function Home() {
 
         {/* Actions */}
         <div className="grid p-1 grid-cols-4 gap-2 mt-4 md:gap-6 lg:absolute right-5 top-15">
-          <button className="bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold p-2 rounded-xl flex flex-col items-center">
+          <Button
+            onClick={() => navigate("/ivault/send")}
+            className="bg-gradient-to-r from-green-400 to-emerald-600 text-black font-semibold p-2 rounded-xl flex flex-col items-center"
+          >
             <Send className="w-6 h-6 mb-2" /> Send
-          </button>
-          <button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
+          </Button>
+          <Button
+            onClick={() => navigate("/ivault/receive")}
+            className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center"
+          >
             <ArrowDownToLine className="w-6 h-6 mb-2" /> Receive
-          </button>
-          <button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
+          </Button>
+          <Button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
             <ShoppingCart className="w-6 h-6 mb-2" /> Buy
-          </button>
-          <button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
+          </Button>
+          <Button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
             <TrendingUp className="w-6 h-6 mb-2" /> Sell
-          </button>
+          </Button>
         </div>
       </Header>
       {/*user info and actions field ends*/}
