@@ -9,6 +9,7 @@ import {
   History,
   EyeClosed,
   ArrowRight,
+  UsersIcon,
 } from "lucide-react";
 import { useState } from "react";
 import Header from "../components/layout/Header";
@@ -68,11 +69,17 @@ export default function Home() {
           >
             <ArrowDownToLine className="w-6 h-6 mb-2" /> Receive
           </Button>
-          <Button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
+          <Button
+            onClick={() => navigate("/ivault/buyToken")}
+            className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center"
+          >
             <ShoppingCart className="w-6 h-6 mb-2" /> Buy
           </Button>
-          <Button className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center">
-            <TrendingUp className="w-6 h-6 mb-2" /> Sell
+          <Button
+            onClick={() => navigate("/p2p")}
+            className="bg-gray-800 text-white font-semibold p-2 rounded-xl flex flex-col items-center"
+          >
+            <UsersIcon className="w-6 h-6 mb-2" /> P2P
           </Button>
         </div>
       </Header>
