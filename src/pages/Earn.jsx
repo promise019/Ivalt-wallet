@@ -3,7 +3,7 @@ import Header from "../components/layout/Header";
 
 export default function Earn() {
   return (
-    <main className="h-screen text-white max-w-full overflow-y-auto md:ml-[17%] lg:ml-[14%] xl:ml-[12%] bg-black px-4 pb-22">
+    <main className="h-screen text-white max-w-full overflow-y-auto md:ml-[20%] lg:ml-[14%] xl:ml-[12%] bg-black px-4 pb-22">
       <Header
         className={
           "sticky w-full px-1 h-fit top-0 py-4 mb-1 z-3 bg-black"

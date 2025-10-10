@@ -5,9 +5,13 @@ export default function Input({
   value,
   readOnly,
   placeholder,
+  id,
+  name,
 }) {
   return (
     <input
+      id={id}
+      name={name}
       type={type}
       className={className}
       onChange={onChange}

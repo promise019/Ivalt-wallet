@@ -41,11 +41,12 @@ export default function P2P() {
           <select className="bg-gray-800 text-white p-2 rounded-xl mt-4 focus:outline-none w-full block md:w-auto md:absolute top-0.5 left-27">
             <option>All Tokens</option>
             <option>ICN</option>
-            <option>BTC</option>
-            <option>USDT</option>
           </select>
         </Header>
-        <section>{page === "buy" && <P2PBuy />}</section>
+        <section>
+          {page === "buy" && <P2PBuy />}
+          {page === "sell" && <P2PSell />}
+        </section>
       </main>
       {/* <NavigationBar className={"hidden md:block md:sticky"} /> */}
     </>

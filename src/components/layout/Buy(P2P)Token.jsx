@@ -1,4 +1,4 @@
-import { Shield, User, Star, Wallet } from "lucide-react";
+import { Shield } from "lucide-react";
 import Header from "./Header";
 import Button from "../ui/Button";
 
@@ -18,14 +18,8 @@ export default function P2PBuy() {
             className="bg-gray-900 p-5 rounded-2xl flex flex-row justify-between items-start md:items-center hover:bg-gray-800 transition"
           >
             <div className="flex items-center gap-3 mb-3 md:mb-0">
-              <User className="w-8 h-8 text-green-400" />
               <div>
                 <p className="font-semibold text-white">Trader #{offer}</p>
-                <div className="flex items-center gap-1 text-yellow-400 text-sm">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3 h-3 fill-yellow-400" />
-                  ))}
-                </div>
                 <p className="text-gray-500 text-sm">
                   120+ trades | 99% success rate
                 </p>
